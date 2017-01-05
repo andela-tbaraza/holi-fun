@@ -1,0 +1,51 @@
+{
+  "name": "holi-fun",
+  "version": "1.0.0",
+  "description": "Holiday plan helper",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel  start:server test:watch",
+    "start:server": "babel-node server.js",
+    "test": "mocha --reporter progress tests/index.js \"tests/**/*.test.js\"",
+    "test:watch": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-tbaraza/holi-fun.git"
+  },
+  "author": "Tonida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-tbaraza/holi-fun/issues"
+  },
+  "homepage": "https://github.com/andela-tbaraza/holi-fun#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.20.0",
+    "babel-register": "^6.18.0",
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "redux": "^3.6.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.0"
+  }
+}
