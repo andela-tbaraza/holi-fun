@@ -1,7 +1,7 @@
-import path from 'path';
-import webpack from 'webpack';
+const path = require('path');
+const webpack = require('webpack');
 
-export default {
+module.exports =  {
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client?reload=true',
@@ -20,12 +20,15 @@ export default {
     // this ensures the emmiting stage is skipped once an error is encountered during compiling
     new webpack.NoErrorsPlugin(),
   ],
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
       {
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel', 'eslint']
+        loaders: ['babel']
       },
       {
         test: /\.css/,
